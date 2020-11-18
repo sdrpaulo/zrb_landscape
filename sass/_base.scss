@@ -1,0 +1,45 @@
+//Variables Fonts
+$main-font: "Montserrat", sans-serif;
+$title-font: "Staatliches", cursive;
+
+//Variables Colors
+$black-color: #100F0F;
+$white-color: #fefcfc;
+$green-color: #2fbe3D;
+$light-green-color: #48E057;
+
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $main-font;
+  line-height: 1.7;
+  position: relative;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: $title-font;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+}
+
+button {
+  padding: 1rem;
+  border-radius: .5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+a, a:link, a:visited {text-decoration: none;}

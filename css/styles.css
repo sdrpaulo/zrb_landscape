@@ -1,0 +1,196 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+  position: relative;
+  overflow-x: hidden; }
+
+h1, h2, h3 {
+  font-family: "Staatliches", cursive;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0; }
+
+button {
+  padding: 1rem;
+  border-radius: .5rem;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+a, a:link, a:visited {
+  text-decoration: none; }
+
+.mobileBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 3; }
+  @media (min-width: 1024px) {
+    .mobileBtn {
+      display: none; } }
+  .mobileBtn_icon {
+    font-size: 5rem;
+    transition: all .5s;
+    color: #2fbe3D; }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100vw;
+  height: 8rem;
+  background-color: #fefcfc;
+  position: fixed;
+  top: 0;
+  z-index: 2; }
+  @media (min-width: 1024px) {
+    .header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; } }
+  .header_logo {
+    width: 12rem;
+    object-fit: cover;
+    object-position: center; }
+    @media (min-width: 375px) {
+      .header_logo {
+        width: 13rem; } }
+    @media (min-width: 414px) {
+      .header_logo {
+        width: 14rem; } }
+    @media (min-width: 768px) {
+      .header_logo {
+        width: 15rem; } }
+    @media (min-width: 1200px) {
+      .header_logo {
+        width: 17rem; } }
+    @media (min-width: 1440px) {
+      .header_logo {
+        width: 20rem; } }
+  .header_nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: inherit;
+    width: 100vw;
+    height: 0;
+    transition: all .8s;
+    position: fixed;
+    top: 8rem; }
+    @media (min-width: 1024px) {
+      .header_nav {
+        width: unset;
+        height: inherit;
+        position: unset;
+        top: unset;
+        margin-right: 1rem; } }
+    .header_nav--item {
+      list-style-type: none;
+      text-align: center;
+      background-color: #2fbe3D;
+      margin: 2rem auto;
+      padding: .2rem 3rem;
+      cursor: pointer;
+      transform: translateX(-500%);
+      transition: transform .5s; }
+      @media (min-width: 375px) {
+        .header_nav--item {
+          padding: 1rem 5rem; } }
+      @media (min-width: 1024px) {
+        .header_nav--item {
+          display: inline-block;
+          transform: translateX(0);
+          padding: .5rem 1rem;
+          margin: 0 .5rem;
+          background-color: inherit;
+          cursor: initial; } }
+      .header_nav--item_link {
+        font-family: "Staatliches", cursive;
+        font-size: 2.5rem;
+        letter-spacing: .3rem;
+        text-transform: uppercase;
+        color: #fefcfc;
+        text-shadow: 0.1rem 0.1rem 0.1rem #100F0F; }
+        @media (min-width: 1024px) {
+          .header_nav--item_link {
+            font-size: 2rem;
+            color: #2fbe3D;
+            text-shadow: none;
+            transition: all .5s; }
+            .header_nav--item_link:hover {
+              color: #48E057; } }
+
+.rotateIcon {
+  transform: rotate(180deg);
+  transition: transform .5s; }
+
+.menuOn {
+  height: 50rem;
+  opacity: 1;
+  transition: all 1s; }
+  @media (min-width: 375px) {
+    .menuOn {
+      height: 60rem; } }
+
+.displayItem {
+  transform: translateX(0);
+  transition: transform .5s; }
+
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url("../img/home_bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+  .home_layout {
+    width: 100%;
+    height: 100%;
+    background-color: #100F0F;
+    opacity: 0.6;
+    position: absolute;
+    top: 0; }
+  .home_title {
+    width: 100%;
+    font-size: 4rem;
+    padding: 8rem 0 0 1rem;
+    color: #48E057;
+    letter-spacing: .2rem;
+    text-shadow: 0.1rem 0.1rem 0.3rem #100F0F; }
+    @media (min-width: 375px) {
+      .home_title {
+        font-size: 4.5rem; } }
+    @media (min-width: 414px) {
+      .home_title {
+        font-size: 5rem; } }
+    @media (min-width: 768px) {
+      .home_title {
+        font-size: 7rem; } }
+    @media (min-width: 1024px) {
+      .home_title {
+        width: 55rem; } }

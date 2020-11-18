@@ -1,0 +1,140 @@
+.mobileBtn {
+  @include flex(row, center, center);
+  border: none;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 3;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
+  &_icon {
+    font-size: 5rem;
+    transition: all 0.5s;
+    color: $green-color;
+  }
+}
+
+.header {
+  @include flex(column, flex-start, center);
+  width: 100vw;
+  height: 8rem;
+  background-color: $white-color;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+
+  @media (min-width: 1024px) {
+    @include flex(row, center, space-between);
+  }
+
+  &_logo {
+    width: 12rem;
+    object-fit: cover;
+    object-position: center;
+
+    @media (min-width: 375px) {
+      width: 13rem;
+    }
+    @media (min-width: 414px) {
+      width: 14rem;
+    }
+    @media (min-width: 768px) {
+      width: 15rem;
+    }
+    @media (min-width: 1200px) {
+      width: 17rem;
+    }
+    @media (min-width: 1440px) {
+      width: 20rem;
+    }
+  }
+
+  &_nav {
+    @include flex(column, center, center);
+    background-color: inherit;
+    width: 100vw;
+    height: 0;
+    transition: all 0.8s;
+    position: fixed;
+    top: 8rem;
+
+    @media (min-width: 1024px) {
+      width: unset;
+      height: inherit;
+      position: unset;
+      top: unset;
+      margin-right: 1rem;
+    }
+
+    &--item {
+      list-style-type: none;
+      text-align: center;
+      background-color: $green-color;
+      margin: 2rem auto;
+      padding: 0.2rem 3rem;
+      cursor: pointer;
+      transform: translateX(-500%);
+      transition: transform 0.5s;
+
+      @media (min-width: 375px) {
+        padding: 1rem 5rem;
+      }
+
+      @media (min-width: 1024px) {
+        display: inline-block;
+        transform: translateX(0);
+        padding: 0.5rem 1rem;
+        margin: 0 0.5rem;
+        background-color: inherit;
+        cursor: initial;
+      }
+
+      &_link {
+        font-family: $title-font;
+        font-size: 2.5rem;
+        letter-spacing: 0.3rem;
+        text-transform: uppercase;
+        color: $white-color;
+        text-shadow: 0.1rem 0.1rem 0.1rem $black-color;
+
+        @media (min-width: 1024px) {
+          font-size: 2rem;
+          color: $green-color;
+          text-shadow: none;
+          transition: all 0.5s;
+
+          &:hover {
+            color: $light-green-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+//JavaScript Classes
+.rotateIcon {
+  transform: rotate(180deg);
+  transition: transform 0.5s;
+}
+
+.menuOn {
+  height: 50rem;
+  opacity: 1;
+  transition: all 1s;
+
+  @media (min-width: 375px) {
+    height: 60rem;
+  }
+}
+
+.displayItem {
+  transform: translateX(0);
+  transition: transform 0.5s;
+}

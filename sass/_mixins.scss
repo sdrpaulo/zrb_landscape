@@ -1,0 +1,19 @@
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin grid($align, $justify) {
+  display: grid;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin section-page {
+  width: 100vw;
+  height: 100%;
+  padding: 10rem 0;
+}
+

@@ -112,11 +112,16 @@ a:visited {
         height: inherit;
         position: unset;
         top: unset;
-        margin-right: 1rem; } }
+        margin-right: 1rem;
+        opacity: 1; } }
     .header_nav--ul {
       opacity: 0;
       transform: translateX(-500%);
       transition: all 0.5s; }
+      @media (min-width: 1024px) {
+        .header_nav--ul {
+          transform: translateX(0);
+          opacity: 1; } }
       .header_nav--ul_item {
         list-style-type: none;
         text-align: center;
@@ -156,12 +161,12 @@ a:visited {
   transition: transform 0.5s; }
 
 .menuOn {
-  height: 50rem;
+  height: 100vh;
   opacity: 1;
   transition: all 0.8s; }
-  @media (min-width: 375px) {
+  @media (min-width: 1024px) {
     .menuOn {
-      height: 60rem; } }
+      height: inherit; } }
 
 .displayItem {
   transform: translateX(0);
@@ -399,4 +404,105 @@ a:visited {
           text-align: justify; }
           @media (min-width: 1024px) {
             .services_content--boxes_box--text {
+              font-size: 2rem; } }
+
+.photos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  padding: 10rem 0; }
+  .photos_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .photos_content--title {
+      font-size: 6rem;
+      margin: auto;
+      color: #2fbe3d; }
+      @media (min-width: 768px) {
+        .photos_content--title {
+          font-size: 8rem; } }
+      @media (min-width: 1024px) {
+        .photos_content--title {
+          font-size: 10rem; } }
+
+.pricing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  padding: 10rem 0;
+  background-color: #2fbe3d;
+  clip-path: polygon(50% 5%, 100% 0, 100% 35%, 100% 74%, 100% 100%, 50% 100%, 0 100%, 0 70%, 0% 35%, 0 0); }
+  .pricing_content {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 5rem 0; }
+    @media (min-width: 768px) {
+      .pricing_content {
+        gap: 10rem 0; } }
+    @media (min-width: 1024px) {
+      .pricing_content {
+        gap: 15rem 0; } }
+    .pricing_content--title {
+      font-size: 6rem;
+      margin: auto;
+      color: #fefcfc; }
+      @media (min-width: 768px) {
+        .pricing_content--title {
+          font-size: 8rem; } }
+      @media (min-width: 1024px) {
+        .pricing_content--title {
+          font-size: 10rem; } }
+    .pricing_content--prices {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      gap: 5rem 0; }
+      @media (min-width: 768px) {
+        .pricing_content--prices {
+          gap: 10rem 0; } }
+      @media (min-width: 1024px) {
+        .pricing_content--prices {
+          gap: 15rem 0; } }
+      @media (min-width: 768px) {
+        .pricing_content--prices {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10rem; } }
+      @media (min-width: 1280px) {
+        .pricing_content--prices {
+          grid-template-columns: repeat(4, 1fr);
+          gap: 0 2rem; } }
+      @media (min-width: 1440px) {
+        .pricing_content--prices {
+          gap: 0 5rem; } }
+      .pricing_content--prices_price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30rem;
+        height: 40rem;
+        background-color: #fefcfc;
+        color: #2fbe3d;
+        padding: 1rem 0;
+        border-radius: 1rem;
+        box-shadow: 0 0 0.5rem #100f0f; }
+        .pricing_content--prices_price--title {
+          font-size: 4.5rem; }
+        .pricing_content--prices_price--paragraph, .pricing_content--prices_price--value {
+          font-size: 1.8rem;
+          padding: 1rem 1.5rem;
+          text-align: justify; }
+          @media (min-width: 1024px) {
+            .pricing_content--prices_price--paragraph, .pricing_content--prices_price--value {
               font-size: 2rem; } }

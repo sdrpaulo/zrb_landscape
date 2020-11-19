@@ -1,0 +1,11 @@
+.photos {
+  @include section-page;
+
+  &_content {
+    @include flex(column, center, center);
+
+    &--title {
+      @include section-title($green-color);
+    }
+  }
+}

@@ -1,1 +1,100 @@
+.about {
+  @include section-page;
 
+  &_content {
+    @include grid(center, center);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "img"
+      "paragraph"
+      "vision"
+      "mission";
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "title title"
+        "img img"
+        "paragraph paragraph"
+        "vision mission";
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-areas:
+        "title title"
+        "paragraph img"
+        "vision mission";
+    }
+
+    @media (min-width: 1400px) {
+      width: 90%;
+    }
+
+    @media (min-width: 1600px) {
+      width: 80%;
+    }
+
+    &--title {
+      @include section-title($green-color);
+      grid-area: title;
+    }
+
+    &--img {
+      width: 30rem;
+      height: 30rem;
+      margin: auto;
+      grid-area: img;
+
+      @media (min-width: 768px) {
+        width: 40rem;
+        height: 40rem;
+      }
+    }
+
+    &--paragraphs {
+      @include flex(column, center, center);
+      margin: auto;
+      grid-area: paragraph;
+
+      @media (min-width: 768px) {
+        width: 85%;
+      }
+
+      &_text {
+        @include section-paragraph;
+        margin: 0.5rem 0;
+      }
+    }
+
+    &--vision,
+    &--mission {
+      @include flex(column, center, center);
+      margin: auto;
+
+      @media (min-width: 768px) {
+        width: 85%;
+      }
+
+      &_title {
+        font-size: 3.5rem;
+        color: $green-color;
+
+        @media (min-width: 768px) {
+          font-size: 4.5rem;
+        }
+      }
+
+      &_text {
+        @include section-paragraph;
+      }
+    }
+
+    &--vision {
+      grid-area: vision;
+    }
+    &--mission {
+      grid-area: mission;
+    }
+  }
+}

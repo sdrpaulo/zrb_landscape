@@ -3,13 +3,14 @@ $main-font: "Montserrat", sans-serif;
 $title-font: "Staatliches", cursive;
 
 //Variables Colors
-$black-color: #100F0F;
+$black-color: #100f0f;
 $white-color: #fefcfc;
-$green-color: #2fbe3D;
-$light-green-color: #48E057;
+$green-color: #2fbe3d;
+$light-green-color: #48e057;
 
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -19,6 +20,7 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
 }
 
 body {
@@ -28,7 +30,9 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: $title-font;
   text-transform: uppercase;
   font-weight: bold;
@@ -37,9 +41,13 @@ h1, h2, h3 {
 
 button {
   padding: 1rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-a, a:link, a:visited {text-decoration: none;}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}

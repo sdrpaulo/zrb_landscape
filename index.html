@@ -12,33 +12,33 @@
   <title>ZRB Landscape</title>
 </head>
 <body>
-  <button class="mobileBtn">
-    <i class="fas fa-chevron-circle-down mobileBtn_icon"></i>
+  <button class="mobileBtn" id="button">
+    <i class="fas fa-chevron-circle-down mobileBtn_icon" id="icon"></i>
   </button>
   <header class="header">
     <img src="./img/logo.png" alt="" class="header_logo" data-aos="fade-down">
-    <nav class="header_nav">
-      <ul>
-        <li class="header_nav--item">
-          <a href="#" class="header_nav--item_link">Home</a>
+    <nav class="header_nav" id="navbar">
+      <ul class="header_nav--ul" id="ul">
+        <li class="header_nav--ul_item" id="li">
+          <a href="#" class="header_nav--ul_item--link">Home</a>
         </li>
-        <li class="header_nav--item">
-          <a href="#" class="header_nav--item_link">About Us</a>
+        <li class="header_nav--ul_item" id="li">
+          <a href="#" class="header_nav--ul_item--link">About Us</a>
         </li>
-        <li class="header_nav--item">
-          <a href="#" class="header_nav--item_link">Services</a>
+        <li class="header_nav--ul_item" id="li">
+          <a href="#" class="header_nav--ul_item--link">Services</a>
         </li>
-        <li class="header_nav--item">
-          <a href="#" class="header_nav--item_link">Photos</a>
+        <li class="header_nav--ul_item" id="li">
+          <a href="#" class="header_nav--ul_item--link">Photos</a>
         </li>
-        <li class="header_nav--item">
-          <a href="#" class="header_nav--item_link">Pricing</a>
+        <li class="header_nav--ul_item" id="li">
+          <a href="#" class="header_nav--ul_item--link">Pricing</a>
         </li>
-        <li class="header_nav--item">
-          <a href="#" class="header_nav--item_link">Blog</a>
+        <li class="header_nav--ul_item" id="li">
+          <a href="#" class="header_nav--ul_item--link">Blog</a>
         </li>
-        <li class="header_nav--item">
-          <a href="#" class="header_nav--item_link">Contact</a>
+        <li class="header_nav--ul_item" id="li">
+          <a href="#" class="header_nav--ul_item--link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -52,8 +52,59 @@
     </section>
     <section class="about" id="about">
       <div class="about_content">
-        <h1 class="about_content--title" >About Us</h1>
-
+        <h1 class="about_content--title" data-aos="flip-up">About Us</h1>
+        <img src="https://picsum.photos/600" alt="" class="about_content--img" data-aos="zoom-in">
+        <div class="about_content--paragraphs" data-aos="fade-right">
+          <p class="about_content--paragraphs_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, nulla eos culpa illo corporis similique quaerat dignissimos ad temporibus quam mollitia odio impedit maiores optio repellendus beatae a, consectetur eius!</p>
+          <p class="about_content--paragraphs_text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat, expedita numquam! Quos quis explicabo corrupti quia commodi porro eligendi alias cumque ipsam. Aperiam, asperiores? Debitis, commodi. Consequuntur nesciunt in molestias.</p>
+        </div>
+        <div class="about_content--vision" data-aos="fade-up-right">
+          <h2 class="about_content--vision_title">
+            Vision
+          </h2>
+          <p class="about_content--vision_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus qui veritatis, ipsum quas quidem iure!
+          </p>
+        </div>
+        <div class="about_content--mission" data-aos="fade-up-left">
+          <h2 class="about_content--mission_title">
+            Mission
+          </h2>
+          <p class="about_content--mission_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus qui veritatis, ipsum quas quidem iure!
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="services" id="services">
+      <div class="services_content">
+        <h1 class="services_content--title">Services</h1>
+        <div class="services_content--boxes">
+          <div class="services_content--boxes_box" data-aos="fade-right">
+            <i class="far fa-smile services_content--boxes_box--icon"></i>
+            <p class="services_content--boxes_box--text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ut.
+            </p>
+          </div>
+          <div class="services_content--boxes_box" data-aos="fade-left">
+            <i class="far fa-smile services_content--boxes_box--icon"></i>
+            <p class="services_content--boxes_box--text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ut.
+            </p>
+          </div>
+          <div class="services_content--boxes_box" data-aos="fade-right">
+            <i class="far fa-smile services_content--boxes_box--icon"></i>
+            <p class="services_content--boxes_box--text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ut.
+            </p>
+          </div>
+          <div class="services_content--boxes_box" data-aos="fade-left">
+            <i class="far fa-smile services_content--boxes_box--icon"></i>
+            <p class="services_content--boxes_box--text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ut.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </main>

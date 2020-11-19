@@ -1,41 +1,36 @@
 const site = {
+
   displayMobileMenu() {
-    if (window.screen.width < 1024) {
-      const button = document.querySelector('.mobileBtn');
-      const icon = document.querySelector('.mobileBtn_icon');
-      const navbar = document.querySelector('.header_nav');
-      const navbarItems = document.querySelectorAll('.header_nav--item');
-  
-      button.addEventListener('click', () => {
+    const button = document.querySelector('#button');
+    const icon = document.querySelector('#icon');
+    const navbar = document.querySelector('#navbar');
+    const ul = document.querySelector('#ul');
+    const li = document.querySelectorAll('#li');
 
-        if (navbar.classList.contains('menuOn')) {
-          navbarItems.forEach(item => item.classList.remove('displayItem')); 
-          setTimeout(() => {
-            navbar.classList.remove('menuOn');
-            icon.classList.remove('rotateIcon');
-          }, 100);
-        }
-
-        navbar.classList.add('menuOn');
-        icon.classList.add('rotateIcon');
+    button.addEventListener('click', () => {
+      if (navbar.classList.contains('menuOn')) {
+        ul.classList.toggle('displayItem');
         setTimeout(() => {
-          navbarItems.forEach(item => item.classList.add('displayItem'));          
-        }, 700);
-
-      })
-  
-      navbarItems.forEach(item => item.addEventListener('click', () => {
-        navbarItems.forEach(item => {
-          item.classList.remove('displayItem');
-        })
+          navbar.classList.toggle('menuOn');
+          icon.classList.toggle('rotateIcon');
+        }, 200);
+      }
+      if (!navbar.classList.contains('menuOn')) {
+        navbar.classList.toggle('menuOn');
+        icon.classList.toggle('rotateIcon');
         setTimeout(() => {
-          navbar.classList.remove('menuOn');
-          icon.classList.remove('rotateIcon');          
-        }, 100);
-      }))
-    }
+          ul.classList.toggle('displayItem');        
+        }, 500);
+      }
+    })
 
-    return null;
+    li.forEach(item => item.addEventListener('click', () => {
+      ul.classList.toggle('displayItem');
+      setTimeout(() => {
+        navbar.classList.toggle('menuOn');
+        icon.classList.toggle('rotateIcon');
+      }, 200);
+    }))
   },
 
   init() {

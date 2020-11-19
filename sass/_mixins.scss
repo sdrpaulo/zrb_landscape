@@ -9,11 +9,44 @@
   display: grid;
   align-items: $align;
   justify-content: $justify;
+  margin: auto;
+  gap: 5rem 0;
+
+  @media (min-width: 768px) {
+    gap: 10rem 0;
+  }
+  @media (min-width: 1024px) {
+    gap: 15rem 0;
+  }
 }
 
 @mixin section-page {
+  @include flex(row, center, center);
   width: 100vw;
   height: 100%;
   padding: 10rem 0;
 }
 
+@mixin section-title($color) {
+  font-size: 6rem;
+  margin: auto;
+  color: $color;
+
+  @media (min-width: 768px) {
+    font-size: 8rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 10rem;
+  }
+}
+
+@mixin section-paragraph {
+  font-size: 1.8rem;
+  padding: 1rem 1.5rem;
+  text-align: justify;
+
+  @media (min-width: 1024px) {
+    font-size: 2rem;
+  }
+}

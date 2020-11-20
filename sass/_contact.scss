@@ -1,1 +1,97 @@
+.contact {
+  @include section-page;
+  background-color: $green-color;
+  color: $white-color;
 
+  &_content {
+    @include grid(center, center);
+
+    &--title {
+      @include section-title($white-color);
+    }
+
+    &--paragraph {
+      @include section-paragraph;
+      @media (min-width: 768px) {
+        width: 65rem;
+      }
+      @media (min-width: 768px) {
+        width: 75rem;
+      }
+    }
+
+    &--infos {
+      @include grid(center, center);
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "map phone" "map social";
+        gap: 0 5rem;
+      }
+
+      @media (min-width: 1024px) {
+        gap: 0 10rem;
+      }
+
+      @media (min-width: 1200px) {
+        gap: 0 15rem;
+      }
+
+      &_phone {
+        @include flex(row, center, center);
+
+        @media (min-width: 768px) {
+          grid-area: phone;
+        }
+
+        &--icon {
+          font-size: 4.5rem;
+          margin: 0 1rem;
+        }
+
+        &--number {
+          font-size: 1.8rem;
+          margin: 0 1rem;
+          letter-spacing: 0.1rem;
+        }
+      }
+
+      &_map {
+        width: 30rem;
+        border-radius: 1rem;
+
+        @media (min-width: 768px) {
+          grid-area: map;
+        }
+      }
+
+      &_social {
+        display: grid;
+        width: 30rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem 0;
+        margin: auto;
+
+        @media (min-width: 768px) {
+          grid-area: social;
+        }
+
+        &--text {
+          @include section-paragraph;
+          grid-column: 1/-1;
+          align-self: center;
+          justify-self: center;
+        }
+
+        &--link {
+          align-self: center;
+          justify-self: center;
+
+          &_icon {
+            font-size: 4.5rem;
+          }
+        }
+      }
+    }
+  }
+}

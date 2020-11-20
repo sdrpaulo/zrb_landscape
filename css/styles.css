@@ -220,6 +220,9 @@ a:visited {
   width: 100vw;
   height: 100%;
   padding: 10rem 0; }
+  @media (min-width: 1024px) {
+    .about {
+      padding: 15rem 0; } }
   .about_content {
     display: grid;
     align-items: center;
@@ -321,6 +324,9 @@ a:visited {
   height: 100%;
   padding: 10rem 0;
   background-color: #2fbe3d; }
+  @media (min-width: 1024px) {
+    .services {
+      padding: 15rem 0; } }
   .services_content {
     display: grid;
     align-items: center;
@@ -414,6 +420,9 @@ a:visited {
   width: 100vw;
   height: 100%;
   padding: 10rem 0; }
+  @media (min-width: 1024px) {
+    .photos {
+      padding: 15rem 0; } }
   .photos_content {
     display: flex;
     flex-direction: column;
@@ -438,20 +447,22 @@ a:visited {
   width: 100vw;
   height: 100%;
   padding: 10rem 0;
-  background-color: #2fbe3d;
-  clip-path: polygon(50% 5%, 100% 0, 100% 35%, 100% 74%, 100% 100%, 50% 100%, 0 100%, 0 70%, 0% 35%, 0 0); }
+  background-color: #2fbe3d; }
+  @media (min-width: 1024px) {
+    .pricing {
+      padding: 15rem 0; } }
   .pricing_content {
     display: grid;
     align-items: center;
     justify-content: center;
-    margin: auto;
-    gap: 5rem 0; }
-    @media (min-width: 768px) {
-      .pricing_content {
-        gap: 10rem 0; } }
+    gap: 5rem; }
     @media (min-width: 1024px) {
       .pricing_content {
-        gap: 15rem 0; } }
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10rem 4rem; } }
+    @media (min-width: 1200px) {
+      .pricing_content {
+        gap: 10rem; } }
     .pricing_content--title {
       font-size: 6rem;
       margin: auto;
@@ -462,47 +473,292 @@ a:visited {
       @media (min-width: 1024px) {
         .pricing_content--title {
           font-size: 10rem; } }
-    .pricing_content--prices {
+      @media (min-width: 768px) {
+        .pricing_content--title {
+          grid-column: 1/-1; } }
+    .pricing_content--card {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      grid-template-columns: 1fr;
+      grid-template-rows: 5rem 10rem 1fr 10rem;
+      grid-template-areas: "title" "price" "text" "button";
+      width: 30rem;
+      height: 35rem;
+      background-color: #fefcfc;
+      box-shadow: 0 0 0.5rem #100f0f;
+      border-radius: 1rem; }
+      .pricing_content--card_title {
+        font-size: 4.5rem;
+        color: #2fbe3d;
+        grid-area: title;
+        margin: auto; }
+      .pricing_content--card_price {
+        font-size: 3rem;
+        grid-area: price;
+        margin: auto; }
+      .pricing_content--card_text {
+        font-size: 1.7rem;
+        text-align: justify;
+        width: 90%;
+        margin: auto;
+        grid-area: text; }
+      .pricing_content--card_link {
+        grid-area: button;
+        width: 20rem;
+        background-color: #48e057;
+        color: #fefcfc;
+        padding: 1.5rem;
+        font-size: 1.5rem;
+        text-align: center;
+        text-transform: uppercase;
+        border-radius: 0.5rem;
+        transition: all 0.5s;
+        margin: auto; }
+        .pricing_content--card_link:hover {
+          background-color: #2fbe3d; }
+
+.blog {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  padding: 10rem 0; }
+  @media (min-width: 1024px) {
+    .blog {
+      padding: 15rem 0; } }
+  .blog_content {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 5rem 0; }
+    @media (min-width: 768px) {
+      .blog_content {
+        gap: 10rem 0; } }
+    @media (min-width: 1024px) {
+      .blog_content {
+        gap: 15rem 0; } }
+    .blog_content--title {
+      font-size: 6rem;
+      margin: auto;
+      color: #2fbe3d; }
+      @media (min-width: 768px) {
+        .blog_content--title {
+          font-size: 8rem; } }
+      @media (min-width: 1024px) {
+        .blog_content--title {
+          font-size: 10rem; } }
+    .blog_content--articles {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      gap: 5rem 0;
+      gap: 10rem 0; }
+      @media (min-width: 768px) {
+        .blog_content--articles {
+          gap: 10rem 0; } }
+      @media (min-width: 1024px) {
+        .blog_content--articles {
+          gap: 15rem 0; } }
+      @media (min-width: 768px) {
+        .blog_content--articles {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10rem 5rem; } }
+      @media (min-width: 1024px) {
+        .blog_content--articles {
+          gap: 15rem 5rem; } }
+      @media (min-width: 1200px) {
+        .blog_content--articles {
+          gap: 15rem; } }
+      .blog_content--articles_article {
+        display: grid;
+        grid-template-columns: 10rem 1fr;
+        grid-template-rows: 4rem 12rem 6rem;
+        grid-template-areas: "img title" "img paragraph" "img button";
+        width: 30rem;
+        height: 20rem;
+        padding: 3rem 0;
+        gap: 0 1rem; }
+        @media (min-width: 375px) {
+          .blog_content--articles_article {
+            width: 35rem; } }
+        @media (min-width: 1024px) {
+          .blog_content--articles_article {
+            width: 45rem; } }
+        .blog_content--articles_article--img {
+          width: 10rem;
+          height: 20rem;
+          object-fit: cover;
+          object-position: center;
+          grid-area: img;
+          align-self: center; }
+        .blog_content--articles_article--title {
+          font-size: 3.5rem;
+          grid-area: title;
+          align-self: center;
+          justify-self: center; }
+        .blog_content--articles_article--text {
+          font-size: 1.5rem;
+          text-align: justify;
+          grid-area: paragraph;
+          align-self: center;
+          justify-self: center; }
+        .blog_content--articles_article--link {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          width: 15rem;
+          height: 5rem;
+          font-size: 1.5rem;
+          background-color: #48e057;
+          transition: all 0.5s;
+          border-radius: 0.5rem;
+          text-align: center;
+          color: #fefcfc;
+          grid-area: button;
+          align-self: center;
+          justify-self: center; }
+          .blog_content--articles_article--link:hover {
+            background-color: #2fbe3d; }
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  padding: 10rem 0;
+  background-color: #2fbe3d;
+  color: #fefcfc; }
+  @media (min-width: 1024px) {
+    .contact {
+      padding: 15rem 0; } }
+  .contact_content {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 5rem 0; }
+    @media (min-width: 768px) {
+      .contact_content {
+        gap: 10rem 0; } }
+    @media (min-width: 1024px) {
+      .contact_content {
+        gap: 15rem 0; } }
+    .contact_content--title {
+      font-size: 6rem;
+      margin: auto;
+      color: #fefcfc; }
+      @media (min-width: 768px) {
+        .contact_content--title {
+          font-size: 8rem; } }
+      @media (min-width: 1024px) {
+        .contact_content--title {
+          font-size: 10rem; } }
+    .contact_content--paragraph {
+      font-size: 1.8rem;
+      padding: 1rem 1.5rem;
+      text-align: justify; }
+      @media (min-width: 1024px) {
+        .contact_content--paragraph {
+          font-size: 2rem; } }
+      @media (min-width: 768px) {
+        .contact_content--paragraph {
+          width: 65rem; } }
+      @media (min-width: 768px) {
+        .contact_content--paragraph {
+          width: 75rem; } }
+    .contact_content--infos {
       display: grid;
       align-items: center;
       justify-content: center;
       margin: auto;
       gap: 5rem 0; }
       @media (min-width: 768px) {
-        .pricing_content--prices {
+        .contact_content--infos {
           gap: 10rem 0; } }
       @media (min-width: 1024px) {
-        .pricing_content--prices {
+        .contact_content--infos {
           gap: 15rem 0; } }
       @media (min-width: 768px) {
-        .pricing_content--prices {
+        .contact_content--infos {
           grid-template-columns: repeat(2, 1fr);
-          gap: 10rem; } }
-      @media (min-width: 1280px) {
-        .pricing_content--prices {
-          grid-template-columns: repeat(4, 1fr);
-          gap: 0 2rem; } }
-      @media (min-width: 1440px) {
-        .pricing_content--prices {
+          grid-template-areas: "map phone" "map social";
           gap: 0 5rem; } }
-      .pricing_content--prices_price {
+      @media (min-width: 1024px) {
+        .contact_content--infos {
+          gap: 0 10rem; } }
+      @media (min-width: 1200px) {
+        .contact_content--infos {
+          gap: 0 15rem; } }
+      .contact_content--infos_phone {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: center; }
+        @media (min-width: 768px) {
+          .contact_content--infos_phone {
+            grid-area: phone; } }
+        .contact_content--infos_phone--icon {
+          font-size: 4.5rem;
+          margin: 0 1rem; }
+        .contact_content--infos_phone--number {
+          font-size: 1.8rem;
+          margin: 0 1rem;
+          letter-spacing: 0.1rem; }
+      .contact_content--infos_map {
         width: 30rem;
-        height: 40rem;
-        background-color: #fefcfc;
-        color: #2fbe3d;
-        padding: 1rem 0;
-        border-radius: 1rem;
-        box-shadow: 0 0 0.5rem #100f0f; }
-        .pricing_content--prices_price--title {
-          font-size: 4.5rem; }
-        .pricing_content--prices_price--paragraph, .pricing_content--prices_price--value {
+        border-radius: 1rem; }
+        @media (min-width: 768px) {
+          .contact_content--infos_map {
+            grid-area: map; } }
+      .contact_content--infos_social {
+        display: grid;
+        width: 30rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem 0;
+        margin: auto; }
+        @media (min-width: 768px) {
+          .contact_content--infos_social {
+            grid-area: social; } }
+        .contact_content--infos_social--text {
           font-size: 1.8rem;
           padding: 1rem 1.5rem;
-          text-align: justify; }
+          text-align: justify;
+          grid-column: 1/-1;
+          align-self: center;
+          justify-self: center; }
           @media (min-width: 1024px) {
-            .pricing_content--prices_price--paragraph, .pricing_content--prices_price--value {
+            .contact_content--infos_social--text {
               font-size: 2rem; } }
+        .contact_content--infos_social--link {
+          align-self: center;
+          justify-self: center; }
+          .contact_content--infos_social--link_icon {
+            font-size: 4.5rem; }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #100f0f;
+  color: #48e057;
+  height: 5rem;
+  font-size: 1rem; }
+  @media (min-width: 375px) {
+    .footer {
+      font-size: 1.3rem; } }
+  @media (min-width: 414px) {
+    .footer {
+      font-size: 1.5rem; } }
+  @media (min-width: 768px) {
+    .footer {
+      justify-content: flex-end;
+      padding-right: 1rem; } }

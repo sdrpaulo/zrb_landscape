@@ -5,7 +5,8 @@
     @include flex(column, center, center);
 
     &--title {
-      @include section-title($green-color);
+      @include section-title;
+      color: $green-color;
     }
   }
 }

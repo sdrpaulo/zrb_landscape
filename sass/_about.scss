@@ -2,7 +2,7 @@
   @include section-page;
 
   &_content {
-    @include grid(center, center);
+    @include section-content;
     grid-template-columns: 1fr;
     grid-template-areas:
       "title"
@@ -36,8 +36,9 @@
     }
 
     &--title {
-      @include section-title($green-color);
+      @include section-title;
       grid-area: title;
+      color: $green-color;
     }
 
     &--img {

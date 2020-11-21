@@ -5,7 +5,7 @@
     @include grid(center, center);
 
     &--title {
-      @include section-title($green-color);
+      @include section-title;
     }
 
     &--articles {

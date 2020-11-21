@@ -2,69 +2,55 @@
   @include section-page;
   background-color: $green-color;
 
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
+
   &_content {
     @include grid(center, center);
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-areas: "title" "services";
+    gap: 5rem 0;
 
-    &--title {
-      @include section-title($white-color);
-      grid-area: title;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem;
     }
 
-    &--boxes {
-      @include grid(center, center);
-      width: 100%;
-      grid-area: services;
+    &--title {
+      @include section-title;
+      color: $white-color;
 
       @media (min-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-column: 1/-1;
+        grid-row: 1/2;
+      }
+    }
+
+    &--box {
+      @include flex(row, center, space-between);
+      width: 30rem;
+      height: 12rem;
+      background-color: $white-color;
+      color: $green-color;
+      margin: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 0.5rem $black-color;
+
+      @media (min-width: 375px) {
+        width: 35rem;
+        height: 15rem;
       }
 
       @media (min-width: 1024px) {
-        width: 90%;
+        width: 40rem;
       }
 
-      @media (min-width: 1200px) {
-        width: 80%;
+      &_icon {
+        font-size: 5rem;
+        margin-left: 1rem;
       }
 
-      @media (min-width: 1440px) {
-        width: 70%;
-      }
-
-      @media (min-width: 1440px) {
-        width: 65%;
-      }
-
-      &_box {
-        @include flex(row, center, space-between);
-        width: 30rem;
-        height: 12rem;
-        background-color: $white-color;
-        color: $green-color;
-        margin: auto;
-        border-radius: 0.5rem;
-        box-shadow: 0 0 0.5rem $black-color;
-
-        @media (min-width: 375px) {
-          width: 35rem;
-          height: 15rem;
-        }
-
-        @media (min-width: 1024px) {
-          width: 40rem;
-        }
-
-        &--icon {
-          font-size: 5rem;
-          margin-left: 1rem;
-        }
-
-        &--text {
-          @include section-paragraph;
-        }
+      &_text {
+        @include section-paragraph;
       }
     }
   }

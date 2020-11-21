@@ -10,13 +10,21 @@
   align-items: $align;
   justify-content: $justify;
   margin: auto;
-  gap: 5rem 0;
+}
 
-  @media (min-width: 768px) {
-    gap: 10rem 0;
-  }
+@mixin button($width) {
+  width: $width;
+  border: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1.5rem;
+  margin: auto;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
   @media (min-width: 1024px) {
-    gap: 15rem 0;
+    font-size: 1.7rem;
   }
 }
 
@@ -24,33 +32,48 @@
   @include flex(row, center, center);
   width: 100vw;
   height: 100%;
-  padding: 10rem 0;
+  padding: 5rem 0;
+  position: relative;
 
-  @media (min-width: 1024px) {
-    padding: 15rem 0;
+  @media (min-width: 768px) {
+    padding: 10rem 0;
   }
 }
 
-@mixin section-title($color) {
-  font-size: 6rem;
-  margin: auto;
-  color: $color;
+@mixin section-content {
+  @include grid(center, center);
+  width: 100%;
+  height: 100%;
+  gap: 5rem 0;
+  position: relative;
 
   @media (min-width: 768px) {
-    font-size: 8rem;
+    gap: 10rem 0;
+  }
+}
+
+@mixin section-title {
+  font-size: 5rem;
+  margin: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+
+  @media (min-width: 768px) {
+    font-size: 7rem;
   }
 
-  @media (min-width: 1024px) {
-    font-size: 10rem;
+  @media (min-width: 1200px) {
+    font-size: 8rem;
   }
 }
 
 @mixin section-paragraph {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   padding: 1rem 1.5rem;
   text-align: justify;
+  margin: auto;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1200px) {
     font-size: 2rem;
   }
 }

@@ -2,6 +2,10 @@
   @include section-page;
   background-color: $green-color;
 
+  @media (min-width: 1024px) {
+    height: 100vh;
+  }
+
   &_content {
     display: grid;
     align-items: center;
@@ -18,7 +22,8 @@
     }
 
     &--title {
-      @include section-title($white-color);
+      @include section-title;
+      color: $white-color;
       @media (min-width: 768px) {
         grid-column: 1/-1;
       }
